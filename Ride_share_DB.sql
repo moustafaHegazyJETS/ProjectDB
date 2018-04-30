@@ -70,9 +70,10 @@ CREATE TABLE `user` (
   `Birth_Date` date NOT NULL,
   `User_photo` varchar(100) NOT NULL,
   `National_id` varchar(14) NOT NULL,
+  `pending` varchar(45) NOT NULL,
   PRIMARY KEY (`idUser`),
   UNIQUE KEY `E_Mail_UNIQUE` (`E_Mail`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -81,6 +82,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'Moustafa','123','Moustafa@gmail.com','male','0125910002','1994-01-01','a','29408220300518','1'),(2,'hegayz','123','Moustafaa@gmail.com','male','01208475204','1994-01-01','a','29408220300518','0'),(3,'ele','123','sasaasas','male','012598415','1994-01-01','a','24564545161554','0'),(4,'dddd','123','asddd','male','0125594949','1994-01-01','a','29408220300518','0');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,4 +103,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-25 19:02:23
+-- Dump completed on 2018-04-29 16:48:53
