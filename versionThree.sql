@@ -70,6 +70,7 @@ CREATE TABLE `trip` (
   `from` varchar(60) NOT NULL,
   `to` varchar(60) NOT NULL,
   `numberOfSeats` int(11) NOT NULL,
+  `cost` float NOT NULL,
   PRIMARY KEY (`idTrip`),
   KEY `tripdriver_idx` (`driverId`),
   CONSTRAINT `tripdriver` FOREIGN KEY (`driverId`) REFERENCES `driver_car_info` (`UserId`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -82,7 +83,7 @@ CREATE TABLE `trip` (
 
 LOCK TABLES `trip` WRITE;
 /*!40000 ALTER TABLE `trip` DISABLE KEYS */;
-INSERT INTO `trip` VALUES (4,'visit','moustafa',38,'2002-00-00 02:00:00','portsaid','alex',4);
+INSERT INTO `trip` VALUES (4,'visit','moustafa',38,'02:00','portsaid','alex',1,19.5);
 /*!40000 ALTER TABLE `trip` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -139,7 +140,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (35,'moustafa','1234','Moustafa@gmail.com','male','01259100002','1994-01-01','a','29408220300518','2'),(36,'hegazy','1234','h@gmail.com','male','01259100002','1994-01-01','a','29408220300518','1'),(37,'s','1234','s@gmail.com','male','01259100002','1994-01-01','a','29408220300518','-1'),(38,'aa','1234','a@gmail.com','male','01259100002','1994-01-01','a','29408220300518','-1'),(39,'ddddd','12345','aaaaa@gmail.com','Male','01013362851','30/5/2018','aaa','29502081300563','0');
+INSERT INTO `user` VALUES (35,'moustafa','1234','Moustafa@gmail.com','male','01259100002','1994-01-01','a','29408220300518','2'),(36,'hegazy','1234','h@gmail.com','male','01259100002','1994-01-01','a','29408220300518','1'),(37,'s','1234','s@gmail.com','male','01259100002','1994-01-01','a','29408220300518','-1'),(38,'aa','1234','a@gmail.com','male','01259100002','1994-01-01','a','29408220300518','1'),(39,'ddddd','12345','aaaaa@gmail.com','Male','01013362851','1994-01-01','aaa','29502081300563','1');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,4 +161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-29 15:14:16
+-- Dump completed on 2018-05-31 23:16:25
